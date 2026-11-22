@@ -1,0 +1,10 @@
+# Large data files (downloaded from NOAA NCEI; run scripts/download_data.py to recreate)
+data/
+
+# Build artifacts / caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.DS_Store

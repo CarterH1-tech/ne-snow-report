@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New England Snow in the 21st Century — Was There Really Less?</title>
+<style>
+  :root {
+    --navy: #1f4e79;
+    --orange: #c05621;
+    --green: #2b6a4c;
+    --ink: #1d2733;
+    --muted: #5b6b7d;
+    --paper: #f7f9fc;
+    --line: #e2e8f0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    background: #ffffff;
+    line-height: 1.65;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px 70px; }
+  header.masthead {
+    background: linear-gradient(135deg, #14304a 0%, #1f4e79 55%, #2d6a94 100%);
+    color: #fff;
+    padding: 56px 22px 46px;
+    text-align: center;
+  }
+  .kicker { letter-spacing: 4px; font-size: 12px; font-weight: 600; text-transform: uppercase; opacity: .85; }
+  h1 { font-size: 38px; line-height: 1.2; margin: 16px auto 10px; max-width: 800px; font-weight: 700; }
+  .lede { font-size: 19px; max-width: 760px; margin: 0 auto; opacity: .92; }
+  .verdict {
+    display: inline-block; margin-top: 24px; background: #fff; color: var(--ink);
+    border-radius: 14px; padding: 18px 30px; box-shadow: 0 8px 24px rgba(0,0,0,.35);
+    text-align: center;
+  }
+  .verdict .label { font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+  .verdict .answer { font-size: 42px; font-weight: 800; letter-spacing: 1px; margin-top: 4px; }
+  .verdict .no { color: var(--green); }
+  .verdict .sub { font-size: 13px; color: var(--muted); margin-top: 4px; }
+  section { margin-top: 40px; }
+  h2 {
+    font-size: 24px; color: var(--navy); border-bottom: 3px solid var(--navy);
+    padding-bottom: 8px; margin: 0 0 18px;
+  }
+  h3 { font-size: 18px; color: #25364b; margin: 26px 0 8px; }
+  .card {
+    background: var(--paper); border: 1px solid var(--line); border-radius: 12px;
+    padding: 18px 22px; margin: 18px 0;
+  }
+  .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin: 20px 0; }
+  .stat {
+    background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; text-align: center;
+    box-shadow: 0 2px 6px rgba(31,78,121,.06);
+  }
+  .stat .num { font-size: 30px; font-weight: 800; color: var(--navy); line-height: 1.1; }
+  .stat .num.orange { color: var(--orange); }
+  .stat .num.green { color: var(--green); }
+  .stat .cap { font-size: 12.5px; color: var(--muted); margin-top: 6px; line-height: 1.4; }
+  .fig { margin: 22px 0; }
+  .fig img { width: 100%; border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 4px 14px rgba(31,78,121,.08); }
+  .fig .cap { font-size: 13px; color: var(--muted); margin-top: 8px; font-style: italic; }
+  table.data { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+  table.data th { background: var(--navy); color: #fff; text-align: left; padding: 10px 9px; font-size: 12.5px; letter-spacing: .4px; }
+  table.data td { padding: 9px; border-bottom: 1px solid var(--line); }
+  table.data tr:nth-child(even) td { background: #f4f7fb; }
+  table.data tr:hover td { background: #e9f0f7; }
+  .num-col { text-align: right; font-variant-numeric: tabular-nums; }
+  .pos { color: var(--green); font-weight: 700; }
+  .neg { color: var(--orange); font-weight: 700; }
+  ul.tidy { padding-left: 20px; }
+  ul.tidy li { margin: 7px 0; }
+  .pill { display: inline-block; border-radius: 999px; padding: 3px 13px; font-size: 12px; font-weight: 700; letter-spacing: 1px; }
+  .pill.blue { background: #e3ecf5; color: var(--navy); }
+  .pill.orange { background: #fbeade; color: var(--orange); }
+  .pill.green { background: #e2efe6; color: var(--green); }
+  .pill.gray { background: #eceff3; color: var(--muted); }
+  .footnote, .disclaimer { font-size: 13px; color: var(--muted); }
+  footer { margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+  a { color: var(--navy); }
+  .big-num { font-size: 40px; font-weight: 800; color: var(--navy); }
+  @media (max-width: 640px) {
+    h1 { font-size: 28px; }
+    .verdict .answer { font-size: 34px; }
+    .stat .num { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="kicker">A climate check for the uncle</div>
+  <h1>Did New England get any less snowy?</h1>
+  <p class="lede">Was the complained-about decline real? Seasonal snowfall in New England, 1941–2020,
+  from the Global Historical Climatology Network (GHCN-Daily).</p>
+  <div class="verdict">
+    <div class="label">The short answer</div>
+    <div class="answer no">NO</div>
+    <div class="sub">Snowfall in 2001–2020 was, on average, slightly <em>higher</em> than in 1941–2000 — not lower.</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <h2>The question</h2>
+    <p>
+      An uncle born in 1939 and died in 2024 complained, several times, that there was less snow nowadays than
+      there used to be. He lived in New England for most of his life, so this report asks:
+      <strong>Did seasonal snowfall in New England decline in the first two decades of the 21st century
+      (2001–2020) compared to the last six decades of the 20th century (1941–2000)?</strong>
+    </p>
+    <p>
+      The data answer is <strong>no</strong>. Snowfall in the first two decades of the 21st century was slightly higher
+      than in 1941–2000 on average — an increase of about 2–3%, or roughly 45 mm over the ~1,670 mm baseline,
+      which is not statistically detectable above the noise. The 1980s and 90s were noticeably drier than the
+      1940s–70s, but the 21st century has been flat to slightly higher again.
+    </p>
+    <div class="stat-grid">
+      <div class="stat"><div class="num">+2.7%</div><div class="cap">Mean seasonal snowfall in 2001–2020 vs 1941–2000 (equal-weight over 57 stations)</div></div>
+      <div class="stat"><div class="num orange">+45.5 mm</div><div class="cap">Average per-station change in mean seasonal snowfall, 2001–2020 vs 1941–2000</div></div>
+      <div class="stat"><div class="num green">p ≈ 0.14</div><div class="cap">Two-sided test of the mean per-station change — not statistically significant</div></div>
+      <div class="stat"><div class="num">+3.8%</div><div class="cap">Number of snowy days per season, 1941–2000 → 2001–2020</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why the uncle might have felt it</h2>
+    <p>
+      The complaint is not without a kernel of truth. Snowfall in New England was remarkably consistent in the
+      1940s–70s (about 1,800 mm per season) and then dipped into a lean 1980s–90s (~1,540 mm) before rebounding
+      in the 2000s–2010s. An uncle watching a decade or two feels like it, especially if his memory is dominated
+      by the deep winters of the 1950s–70s. But the numbers do not support a durable decline: the first two
+      decades of the 21st century average the same, or slightly more, snow.
+    </p>
+    <p>
+      In the data, the first two decades of the 21st century look like this compared with the 1940s–1990s.
+      <span class="pill blue">Blue bars = 1941–2000</span> &nbsp; <span class="pill orange">Orange bars = 2001–2020</span>
+    </p>
+  </section>
+
+  <section>
+    <div class="fig">
+      <img src="images/fig1_timeseries.png" alt="Regional mean seasonal snowfall 1941-2020">
+      <div class="cap">Fig. 1 — Equal-weight average of seasonal (Nov–Apr) snowfall across 57 long-record New England stations. The dashed lines are the two period means.</div>
+    </div>
+    <div class="fig">
+      <img src="images/fig2_decades.png" alt="Regional mean snowfall by decade">
+      <div class="cap">Fig. 2 — Regional mean snowfall by decade. Notice the dip in the 1980s–90s and the rebound in the 2000s–2010s.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>The evidence in detail</h2>
+
+    <h3>Regional mean snowfall — 1941–2000 vs 2001–2020</h3>
+    <p>Equal-weight per-station average over the 57 stations with at least 10 seasons in each period:</p>
+    <table class="data">
+      <thead>
+        <tr><th>Metric</th><th>1941–2000 baseline</th><th>2001–2020 recent</th><th>Change</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Mean seasonal snowfall (wetted seasons)</td><td class="num-col">1,672 mm</td><td class="num-col">1,717 mm</td><td class="num-col pos">+2.7%</td></tr>
+        <tr><td>Regional per-season mean</td><td class="num-col">1,739 mm</td><td class="num-col">1,726 mm</td><td class="num-col">−0.7%</td></tr>
+        <tr><td>Median across stations</td><td class="num-col">1,606 mm</td><td class="num-col">1,710 mm</td><td class="num-col pos">+6.5%</td></tr>
+        <tr><td>Snow days per season</td><td class="num-col">27.4</td><td class="num-col">28.5</td><td class="num-col pos">+3.8%</td></tr>
+      </tbody>
+    </table>
+    <p>
+      <span class="pill blue">Snowy winters are feast or famine</span>&nbsp;
+      Season-to-season variation is huge (the 1980 season was ~727 mm; 1996 was ~2,719 mm), so a two-decade average is
+      not the whole story — but it is the fairest comparison for this question.
+    </p>
+
+    <h3>The statistical test</h3>
+    <ul class="tidy">
+      <li><strong>Mean per-station change</strong> (recent − baseline): <strong>+45.5 mm</strong>, 95% CI [−14 mm, +105 mm] — <strong>not significantly different from zero</strong> (one-sample t-test, t = 1.50, p = 0.14; Wilcoxon signed-rank W = 596, p = 0.067).</li>
+      <li><strong>Linear trend across 1941–2020</strong>: −26 mm per decade (−2.6 mm/year), R² = 0.02, p = 0.22 — a weak, statistically indistinguishable-from-zero decline.</li>
+      <li><strong>Trend within 1981–2020</strong>: +67 mm per decade (p = 0.29, n.s.) — the recent period, if anything, is moving the other way.</li>
+      <li><strong>Median-based robustness check</strong>: the median station-level change is +6.5%, so the result does not depend on the handful of heavily snowing elevations.</li>
+    </ul>
+
+    <h3>The per-station picture (Fig. 3)</h3>
+    <p>
+      Some stations did get noticeably less snowy — most strongly <strong>Durham, NH (−33%)</strong>, <strong>Hanover, NH (−22%)</strong> and <strong>Norfolk 2 SW, CT (−21%)</strong>.
+      Others gained dramatically, e.g. Belfast, ME (+54%), Middleboro, MA and Barkhamsted, CT (both +41%).
+      The median station gain is positive; 37 stations show gains, 20 show losses.
+    </p>
+    <div class="fig">
+      <img src="images/fig3_per_station.png" alt="Per-station change in snowfall">
+      <div class="cap">Fig. 3 — Percent change in mean seasonal snowfall per station, 2001–2020 vs 1941–2000.</div>
+    </div>
+
+    <h3>The state-by-state picture (Fig. 4)</h3>
+    <p>Rhode Island is represented by a single long-record station (Kingston), so treat its +19% with caution.</p>
+    <div class="fig">
+      <img src="images/fig4_states.png" alt="Mean seasonal snowfall by New England state">
+      <div class="cap">Fig. 4 — Mean seasonal snowfall by state. New Hampshire (the one clear decline) is the exception; Massachusetts and Rhode Island show increases.</div>
+    </div>
+    <table class="data">
+      <thead>
+        <tr><th>State</th><th>Stations</th><th>Baseline</th><th>Recent</th><th>Change</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Massachusetts</td><td class="num-col">18</td><td class="num-col">1,130 mm</td><td class="num-col">1,285 mm</td><td class="num-col pos">+13.7%</td></tr>
+        <tr><td>Connecticut</td><td class="num-col">6</td><td class="num-col">1,162 mm</td><td class="num-col">1,222 mm</td><td class="num-col pos">+5.2%</td></tr>
+        <tr><td>Maine</td><td class="num-col">10</td><td class="num-col">2,098 mm</td><td class="num-col">2,158 mm</td><td class="num-col pos">+2.9%</td></tr>
+        <tr><td>New Hampshire</td><td class="num-col">13</td><td class="num-col">2,126 mm</td><td class="num-col">2,017 mm</td><td class="num-col neg">−5.1%</td></tr>
+        <tr><td>Rhode Island</td><td class="num-col">1</td><td class="num-col">778 mm</td><td class="num-col">928 mm</td><td class="num-col pos">+19.4%</td></tr>
+        <tr><td>Vermont</td><td class="num-col">9</td><td class="num-col">2,063 mm</td><td class="num-col">2,075 mm</td><td class="num-col pos">+0.6%</td></tr>
+      </tbody>
+    </table>
+
+    <h3>A couple of key airport records</h3>
+    <ul class="tidy">
+      <li><strong>Boston</strong> (USW00014739): 1,083 mm → 1,240 mm (<span class="pos">+14.5%</span>)</li>
+      <li><strong>Concord ASOS</strong> (USW00014745): 1,606 mm → 1,725 mm (<span class="pos">+7.4%</span>)</li>
+      <li><strong>Portland Jetport</strong> (USW00014764): 1,757 mm → 1,812 mm (<span class="pos">+3.2%</span>)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>The verdict</h2>
+    <div class="card">
+      <p style="margin: 0 0 10px;"><strong>No — the data do not support the uncle's complaint.</strong></p>
+      <p style="margin: 0 0 10px;">
+        Across 57 long-record New England stations, seasonal snowfall in 2001–2020 is, on average,
+        <strong>slightly higher</strong> than in 1941–2000 — +2.7% equal-weight (median across stations +6.5%), with no
+        statistically significant decline in either period and a net-positive trend over the last 40 years.
+        Snowfall is also not uniform: New Hampshire's stations show a modest decline (−5%), while the southern and
+        eastern coastal stations gained snow.
+      </p>
+      <p style="margin: 0;" class="footnote">
+        The most honest reading of his complaint: he is <em>not wrong about his subjective memory</em> — the 1980s and 90s
+        really were noticeably leaner, and his favorite childhood winters were among the heaviest in the record.
+        But the first two decades of the 21st century are not a decline relative to 1941–2000; they track the 1940s–70s.
+        The core of his complaint is not borne out by the data.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Caveats and limitations</h2>
+    <ul class="tidy">
+      <li><strong>GHCN-D is not homogenized.</strong> Records come from Cooperative observers, airports and ASOS,
+        with changes in instruments, observation sites, and observing practices across the 20th century. Bias is not
+        corrected, so early and late values should be treated as approximate.</li>
+      <li><strong>Missing data.</strong> Seasons with less than 75% of expected days recorded are excluded from the
+        averages (~12% of seasons). Mean completeness of included seasons is ~98%.</li>
+      <li><strong>Seasonal totals are noisy.</strong> Season-to-season variation is large; the two blocks differ by only
+        ~45 mm, and neither trend is statistically distinguishable from zero.</li>
+      <li><strong>Regional average ≠ local experience.</strong> The uncle lived in his own locale; local climate,
+        urban/suburban exposure and building-related snow accumulation can differ from the average. New Hampshire's
+        stations do show a modest decline (−5%), and Durham, NH reports −33%.</li>
+      <li><strong>Snowfall ≠ snow accumulation.</strong> Snow depth (SNWD) is noisier in the baseline period because
+        fewer observers recorded it regularly, so it is used here only as a qualitative note (the baseline record is
+        much sparser; later stations show comparable or higher depths).</li>
+      <li><strong>Rhode Island is thin.</strong> Only one long-record New England Rhode Island station is included.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Data and reproducibility</h2>
+    <p>Data source: <a href="https://www.ncei.noaa.gov/data/global-historical-climatology-network-daily/">Global Historical Climatology Network — Daily (GHCN-Daily), Version 3.35</a>, NOAA / NCEI, accessed 2026.
+    57 long-record New England stations with ~176-year-long records are used; seasons are Nov–Apr (the winter season).
+    Scripts in this repository reproduce the analysis and figures from raw GHCN-Daily files:</p>
+    <ul class="tidy">
+      <li><code>scripts/download_data.py</code> — fetches station metadata and per-station .dly files (gitignored data directory).</li>
+      <li><code>scripts/analyze.py</code> — parses .dly files, computes season aggregates, prints the statistics above, and writes the four figures to <code>images/</code>.</li>
+    </ul>
+    <div class="card">
+      <p style="margin: 0 0 8px;"><strong>Package dependencies:</strong> pandas, numpy, matplotlib, scipy</p>
+      <p style="margin: 0;" class="footnote">Figures and tables are regenerated from the raw .dly files on every run of <code>scripts/analyze.py</code>.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      Figures from this report: equal-weight average across stations of seasonal snowfall (not a climate product).
+      GHCN-Daily is freely available and is not homogenized; see the NCEI documentation and the references below.
+      Built with Python (pandas/NumPy/matplotlib/SciPy). Not an official NOAA product.
+    </p>
+    <p>
+      <strong>References:</strong> Menne et al. (2012), <em>Journal of Atmospheric and Oceanic Technology</em>, 29, 897–910;
+      Durre et al. (2010), <em>J. Applied Meteorology &amp; Climatology</em>, 49, 1615–1633.
+      Data: NOAA NCEI, GHCN-Daily Version 3.35.
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
